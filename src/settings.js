@@ -853,8 +853,8 @@ var EXTRA_EXPORTED_RUNTIME_METHODS = [];
 // optimize.
 //
 // Setting this list to [], or at least a short and concise set of names you
-// actually use, can be very useful for reducing code size. By default the
-// list contains all the possible APIs.
+// actually use, can be very useful for reducing code size. By default, the
+// list contains a set of commonly used symbols.
 //
 // FIXME: should this just be  0  if we want everything?
 // [link]
@@ -873,6 +873,11 @@ var INCOMING_MODULE_JS_API = [
   'print', 'printErr', 'quit', 'setStatus', 'statusMessage', 'stderr',
   'stdin', 'stdout', 'thisProgram', 'wasm', 'wasmBinary', 'websocket'
 ];
+
+// Set of addiional symbols that can be added to `INCOMING_MODULE_JS_API`.
+// Do not modify this settings, it is used purely to document the symbols
+// available to `INCOMING_MODULE_JS_API`.
+var ADDITIONAL_INCOMING_MODULE_JS_API = ['fetchSettings'];
 
 // If set to nonzero, the provided virtual filesystem if treated
 // case-insensitive, like Windows and macOS do. If set to 0, the VFS is
